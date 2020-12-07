@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DietListFragment">
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activities.DietListActivity">
 
     <Button
         android:id="@+id/button_new"
@@ -15,7 +16,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
-        android:text="@string/new_button"
+        android:text="@string/new_diet_button"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

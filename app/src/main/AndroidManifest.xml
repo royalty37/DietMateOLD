@@ -10,7 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DietMate">
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.WeightlifterActivity"
+            android:label="@string/title_activity_weightlifter"
+            android:theme="@style/Theme.DietMate.NoActionBar"></activity>
+        <activity
+            android:name=".activities.DietTypeActivity"
+            android:label="@string/title_activity_diet_type"
+            android:theme="@style/Theme.DietMate.NoActionBar" />
+        <activity
+            android:name=".activities.DietListActivity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/Theme.DietMate.NoActionBar" />
+        <activity
+            android:name=".activities.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.DietMate.NoActionBar">
             <intent-filter>
