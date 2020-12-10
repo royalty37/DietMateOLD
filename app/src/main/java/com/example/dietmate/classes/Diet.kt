@@ -147,23 +147,24 @@ class Diet() : Serializable {
         var genderS = 5
         if (this.gender == 1)
             genderS = -161
-        var bmr = 10*this.weight+6.25*this.height-5*this.age+genderS
+        val bmr : Double = 10*this.weight+6.25*this.height-5*this.age+genderS
 
-        var activityLevelCalories = 0
+        var activityLevelCalories = 0.0
         when (this.activityLevel) {
-            0 -> activityLevelCalories = (bmr*1.2).toInt()
-            1 -> activityLevelCalories = (bmr*0).toInt()
-            2 -> activityLevelCalories = (bmr*1.46).toInt()
-            3 -> activityLevelCalories = (bmr*1.54).toInt()
-            4 -> activityLevelCalories = (bmr*1.72).toInt()
-            5 -> activityLevelCalories = (bmr*1.89).toInt()
+            0 -> activityLevelCalories = (bmr*1.2)
+            1 -> activityLevelCalories = (bmr*1.37)
+            2 -> activityLevelCalories = (bmr*1.46)
+            3 -> activityLevelCalories = (bmr*1.54)
+            4 -> activityLevelCalories = (bmr*1.72)
+            5 -> activityLevelCalories = (bmr*1.89)
         }
 
         when (this.dietType) {
-            0 -> this.calories = activityLevelCalories - 1000
-            1 -> this.calories = activityLevelCalories -500
-            3 -> this.calories = activityLevelCalories + 500
-            4 -> this.calories = activityLevelCalories + 1000
+            0 -> this.calories = (activityLevelCalories - 1000).toInt()
+            1 -> this.calories = (activityLevelCalories - 500).toInt()
+            2 -> this.calories = activityLevelCalories.toInt()
+            3 -> this.calories = (activityLevelCalories + 500).toInt()
+            4 -> this.calories = (activityLevelCalories + 1000).toInt()
         }
 
         //Protein
@@ -191,46 +192,46 @@ class Diet() : Serializable {
     }
 
     fun generateFoodList() {
-        var newFoodList : ArrayList<food> = ArrayList<food>()
+        val newFoodList = ArrayList<food>()
 
         var remainingProtein : Int = this.protein
         var remainingFat : Int = this.fat
         var remainingCarbohydrates : Int = this.carbohydrates
 
         if (remainingProtein > 62) {
-            var chickenBreast : food = food(62, 4, 0, "200g Chicken Breast")
-            newFoodList?.add(chickenBreast)
+            val chickenBreast= food(62, 4, 0, "200g Chicken Breast")
+            newFoodList.add(chickenBreast)
             remainingProtein -= 62
             remainingFat -= 4
             remainingCarbohydrates -=0
         }
 
         if (remainingProtein > 32) {
-            var milk : food = food(32, 32, 48, "4 cups of Whole Milk")
-            newFoodList?.add(milk)
+            val milk = food(32, 32, 48, "4 cups of Whole Milk")
+            newFoodList.add(milk)
             remainingProtein -= 16
             remainingFat -= 16
             remainingCarbohydrates -= 24
         }
         else if (remainingProtein > 16) {
-            var milk : food = food(16, 16, 24, "2 cups of Whole Milk")
-            newFoodList?.add(milk)
+            var milk = food(16, 16, 24, "2 cups of Whole Milk")
+            newFoodList.add(milk)
             remainingProtein -= 16
             remainingFat -= 16
             remainingCarbohydrates -= 24
         }
         else if (remainingProtein > 8) {
-            var milk: food = food(8, 8, 12, "1 cup of Whole Milk")
-            newFoodList?.add(milk)
+            var milk= food(8, 8, 12, "1 cup of Whole Milk")
+            newFoodList.add(milk)
             remainingProtein -= 8
             remainingFat -= 8
             remainingCarbohydrates -= 12
         }
 
         if(remainingProtein > 10) {
-            var ratio = remainingProtein/21
-            var amountOfAlmonds = (100*ratio).toString()
-            var almonds : food = food(
+            val ratio = remainingProtein/21
+            val amountOfAlmonds = (100*ratio).toString()
+            val almonds = food(
                 (ratio*21).toInt(),
                 (ratio*50).toInt(),
                 (ratio*22).toInt(),
@@ -242,15 +243,15 @@ class Diet() : Serializable {
         }
 
         if (remainingCarbohydrates > 10) {
-            var ratio = remainingCarbohydrates / 17
-            var amountOfPotatos = (100 * ratio).toString()
-            var potatos: food = food(
+            val ratio = remainingCarbohydrates / 17
+            val amountOfPotatoes = (100 * ratio).toString()
+            val potatoes = food(
                 (ratio * 2).toInt(),
                 (ratio * 0.1).toInt(),
                 (ratio * 17).toInt(),
-                amountOfPotatos + "g of Potatoes"
+                amountOfPotatoes + "g of Potatoes"
             )
-            newFoodList.add(potatos)
+            newFoodList.add(potatoes)
             remainingProtein -= (ratio * 2).toInt()
             remainingFat -= (ratio * 0.1).toInt()
             remainingCarbohydrates -= (ratio*17).toInt()
