@@ -3,33 +3,30 @@ package com.example.dietmate.activities
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.Toast
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dietmate.R
 import com.example.dietmate.classes.Diet
 
-class WeightlifterActivity : AppCompatActivity() {
+class OverweightActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.weightlifter_activity)
+        setContentView(R.layout.overweight_activity)
 
         var newDiet : Diet = intent.getSerializableExtra("diet") as Diet
 
-        val yesButton = findViewById<Button>(R.id.button_yes)
+        val yesButton = findViewById<Button>(R.id.button_overweight_yes)
         yesButton.setOnClickListener {
-            newDiet.setWeightlifter(true)
-            val intent = Intent(this, ActivityLevelActivity::class.java)
+            newDiet.setOverweight(true)
+            val intent = Intent(this, WeightlifterActivity::class.java)
             intent.putExtra("diet", newDiet)
             startActivity(intent)
         }
 
-        val noButton = findViewById<Button>(R.id.button_no)
+        val noButton = findViewById<Button>(R.id.button_overweight_no)
         noButton.setOnClickListener {
-            newDiet.setWeightlifter(false)
-            val intent = Intent(this, ActivityLevelActivity::class.java)
+            newDiet.setOverweight(false)
+            val intent = Intent(this, WeightlifterActivity::class.java)
             intent.putExtra("diet", newDiet)
             startActivity(intent)
         }

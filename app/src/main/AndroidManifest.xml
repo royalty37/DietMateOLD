@@ -10,9 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DietMate">
         <activity
+            android:name=".activities.OverweightActivity"
+            android:label="@string/title_activity_overweight"
+            android:theme="@style/Theme.DietMate.NoActionBar"></activity>
+        <activity
+            android:name=".activities.DisplayDietActivity"
+            android:label="@string/title_activity_display_diet"
+            android:theme="@style/Theme.DietMate.NoActionBar" />
+        <activity
+            android:name=".activities.ActivityLevelActivity"
+            android:label="@string/title_activity_acitivity_level"
+            android:theme="@style/Theme.DietMate.NoActionBar" />
+        <activity
+            android:name=".activities.UserStatsActivity"
+            android:label="@string/title_activity_user_stats"
+            android:theme="@style/Theme.DietMate.NoActionBar" />
+        <activity
             android:name=".activities.WeightlifterActivity"
             android:label="@string/title_activity_weightlifter"
-            android:theme="@style/Theme.DietMate.NoActionBar"></activity>
+            android:theme="@style/Theme.DietMate.NoActionBar" />
         <activity
             android:name=".activities.DietTypeActivity"
             android:label="@string/title_activity_diet_type"

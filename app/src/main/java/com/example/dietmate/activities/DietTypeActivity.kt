@@ -18,7 +18,7 @@ class DietTypeActivity : AppCompatActivity() {
         val loseWeightFastButton = findViewById<Button>(R.id.button_lose_weight_fast)
         loseWeightFastButton.setOnClickListener {
             newDiet.setDietType(0)
-            val intent = Intent(this, WeightlifterActivity::class.java)
+            val intent = Intent(this, OverweightActivity::class.java)
             intent.putExtra("diet", newDiet)
             startActivity(intent)
         }
@@ -26,7 +26,7 @@ class DietTypeActivity : AppCompatActivity() {
         val loseWeightButton = findViewById<Button>(R.id.button_lose_weight)
         loseWeightButton.setOnClickListener {
             newDiet.setDietType(1)
-            val intent = Intent(this, WeightlifterActivity::class.java)
+            val intent = Intent(this, OverweightActivity::class.java)
             intent.putExtra("diet", newDiet)
             startActivity(intent)
         }
@@ -34,7 +34,7 @@ class DietTypeActivity : AppCompatActivity() {
         val maintainWeightButton = findViewById<Button>(R.id.button_maintain_weight)
         maintainWeightButton.setOnClickListener {
             newDiet.setDietType(2)
-            val intent = Intent(this, WeightlifterActivity::class.java)
+            val intent = Intent(this, OverweightActivity::class.java)
             intent.putExtra("diet", newDiet)
             startActivity(intent)
         }
@@ -42,7 +42,7 @@ class DietTypeActivity : AppCompatActivity() {
         val gainWeightButton = findViewById<Button>(R.id.button_gain_weight)
         gainWeightButton.setOnClickListener {
             newDiet.setDietType(3)
-            val intent = Intent(this, WeightlifterActivity::class.java)
+            val intent = Intent(this, OverweightActivity::class.java)
             intent.putExtra("diet", newDiet)
             startActivity(intent)
         }
@@ -50,7 +50,7 @@ class DietTypeActivity : AppCompatActivity() {
         val gainWeightFastButton = findViewById<Button>(R.id.button_gain_weight_fast)
         gainWeightFastButton.setOnClickListener {
             newDiet.setDietType(4)
-            val intent = Intent(this, WeightlifterActivity::class.java)
+            val intent = Intent(this, OverweightActivity::class.java)
             intent.putExtra("diet", newDiet)
             startActivity(intent)
         }

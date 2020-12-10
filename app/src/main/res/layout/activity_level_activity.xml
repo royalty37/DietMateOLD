@@ -6,19 +6,18 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <TextView
-        android:id="@+id/text_goals"
+        android:id="@+id/text_activitylevel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/goals_title"
+        android:text="@string/activitylevel_title"
         android:textSize="30sp"
         android:textColor="#00FF00"
         android:gravity="center"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginVertical="20dp"/>
 
-
     <Button
-        android:id="@+id/button_lose_weight_fast"
+        android:id="@+id/button_no_exercise"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginStart="20dp"
@@ -26,16 +25,16 @@
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:backgroundTint="#00FF00"
-        android:text="@string/lose_weight_fast_button"
+        android:text="@string/no_exercise_button"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@id/button_lose_weight"
+        app:layout_constraintBottom_toTopOf="@id/button_light_exercise"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_goals" />
+        app:layout_constraintTop_toBottomOf="@id/text_activitylevel" />
 
     <Button
-        android:id="@+id/button_lose_weight"
+        android:id="@+id/button_light_exercise"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginStart="20dp"
@@ -43,15 +42,15 @@
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:backgroundTint="#00FF00"
-        android:text="@string/lose_weight_button"
+        android:text="@string/light_exercise_button"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/button_lose_weight_fast"
-        app:layout_constraintBottom_toTopOf="@id/button_maintain_weight"
+        app:layout_constraintTop_toBottomOf="@id/button_no_exercise"
+        app:layout_constraintBottom_toTopOf="@id/button_moderate_exercise"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button_maintain_weight"
+        android:id="@+id/button_moderate_exercise"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginStart="20dp"
@@ -59,15 +58,15 @@
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:backgroundTint="#00FF00"
-        android:text="@string/maintain_weight_button"
+        android:text="@string/moderate_exercise_button"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@id/button_gain_weight"
+        app:layout_constraintBottom_toTopOf="@id/button_high_exercise"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_lose_weight"/>
+        app:layout_constraintTop_toBottomOf="@id/button_light_exercise"/>
 
     <Button
-        android:id="@+id/button_gain_weight"
+        android:id="@+id/button_high_exercise"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginStart="20dp"
@@ -75,15 +74,15 @@
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:backgroundTint="#00FF00"
-        android:text="@string/gain_weight_button"
+        android:text="@string/high_exercise_button"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/button_maintain_weight"
-        app:layout_constraintBottom_toTopOf="@id/button_gain_weight_fast"
+        app:layout_constraintTop_toBottomOf="@id/button_moderate_exercise"
+        app:layout_constraintBottom_toTopOf="@id/button_very_high_exercise"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button_gain_weight_fast"
+        android:id="@+id/button_very_high_exercise"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginStart="20dp"
@@ -91,9 +90,25 @@
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:backgroundTint="#00FF00"
-        android:text="@string/gain_weight_fast_button"
+        android:text="@string/very_high_exercise_button"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/button_gain_weight"
+        app:layout_constraintTop_toBottomOf="@id/button_high_exercise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/button_extra_high_exercise" />
+
+    <Button
+        android:id="@+id/button_extra_high_exercise"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#00FF00"
+        android:text="@string/extra_high_exercise_button"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/button_very_high_exercise"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />

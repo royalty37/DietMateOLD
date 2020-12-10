@@ -17,11 +17,10 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
         android:text="@string/new_diet_button"
-        android:textSize="20sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        android:theme="@style/Button.Green"
         android:backgroundTint="#00FF00"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
